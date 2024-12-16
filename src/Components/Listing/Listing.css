@@ -1,0 +1,84 @@
+.Listing_wrapper{
+    background-color: #f5ede7;
+}
+.Listing_Cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    width: 100%;
+}
+.Listing_Cards .Listing_Card{
+    width: 100%;
+    height: 480px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+}
+.Listing_Cards .Listing_Card .Img_wrapper{
+    width: 100%;
+    height: 250px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+.Listing_Cards .Listing_Card .Img_wrapper::after{
+    content: attr(propertyType);
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    padding: 4px 12px;
+    background-color: rgb(60, 92, 13);
+    color: #fff;
+    border-radius: 5px;
+}
+.Listing_Cards .Listing_Card .Img_wrapper img{
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    transition: .5s;
+}
+.Listing_Cards .Listing_Card:hover .Img_wrapper img{
+    transform: scale(1.05);
+}
+.Listing_Cards .Listing_Card h2{
+    margin-top: 15px;
+}
+.Listing_Cards .Listing_Card h2{
+    font-size: 16px;
+    font-weight: 400;
+    display: block;
+}
+.Listing_Cards .Listing_Card .features{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    padding-bottom: 20px;
+}
+.Listing_Cards .Listing_Card .buyBtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10;
+    border-top: 0.8px dashed #000;
+}
+.Listing_Cards .Listing_Card .buyBtn h3{
+    font-size: 25px;
+}
+.Listing_Cards .Listing_Card .buyBtn i{
+    font-size: 30px;
+    transform: rotate(320deg);
+    transition: 1s;
+}
+.Listing_Cards .Listing_Card:hover .buyBtn i{
+    transform: rotate(0deg);
+}
+@media screen and (max-width:1200px) {
+    .Listing_Cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+}   
+@media screen and (max-width:768px) {
+    .Listing_Cards{
+        grid-template-columns: repeat(1,1fr);
+    }
+}   
